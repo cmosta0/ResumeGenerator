@@ -1,0 +1,116 @@
+{
+  "name": "Jhon Doe",
+  "position": "Software Engineer",
+  "overview": "Professional with a strong passion for software development. Always looking to provide quality, learn new technologies and also share knowledge. <strong>Team player</strong> who enjoy learning from others, but also support them. Free-time activities related software-development: <strong>mentoring</strong>, <strong>freelancing</strong> and <strong>problem-solving</strong> (code challenges).",
+  "education": {
+    "career": "Computational Systems Engineering",
+    "school": "Little Jump Institute (2012-1016)"
+  },
+  "contact": {
+    "email": "myname@example.com",
+    "phone": "(+52) 123 456 7890",
+    "linkedin": "https://www.linkedin.com/in/some-profile/",
+    "stackoverflow": "https://stackoverflow.com/users/XXXXXX/some-user",
+    "github": "https://github.com/cmosta0"
+  },
+  "main_technologies": {
+    "programming_languages": [
+      "Scala",
+      "Python",
+      "Java",
+      "Javascript"
+    ],
+    "cloud_providers": [
+      "AWS",
+      "GCP"
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner",
+      "Java OCA-v8"
+    ],
+    "extras": [
+      {
+        "title": "Data Engineering",
+        "elements": [
+          "Apache Spark",
+          "Apache Airflow",
+          "Snowflake",
+          "Segment",
+          "Qubole",
+          "Hadoop"
+        ]
+      }
+    ]
+  },
+  "work_experience": [
+    {
+      "company": "Awesome company",
+      "time_period": "2019-present",
+      "projects": [
+        {
+          "title": "Sr. Software Engineer",
+          "description": "On this assignation I worked on a cloud migration for a backend system using <strong>python</strong> for <strong>Apache Airflow</strong> with connectors for <strong>GCS</strong>, <strong>S3</strong> and <strong>Snowflake</strong>.<br><br>Team lead responsible to delegate, design and document projects.",
+          "tags": [
+            "Python",
+            "Apache Airflow",
+            "GCP",
+            "AWS",
+            "Snowflake"
+          ]
+        },
+        {
+          "title": "Software Engineer",
+          "description": "Worked as data engineer to code ETL's with <strong>Scala</strong> and <strong>Apache Spark</strong> to consume data sources from <strong>AWS S3</strong> on different formats like <strong>JSON</strong> and <strong>parquet</strong>.<br><br>Using <strong>Apache Airflow</strong> to orchestration and <strong>datadog</strong> for monitoring and operation metrics dashboards.<br><br>Using <strong>Qubole</strong> as data platform to easily manage clusters, notebooks and some other infra resources.",
+          "tags": [
+            "Python",
+            "Scala",
+            "AWS",
+            "Apache Spark",
+            "Apache Airflow",
+            "Qubole",
+            "Datadog"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "My Old Company",
+      "time_period": "2019-2016",
+      "projects": [
+        {
+          "title": "Application Development Analyst",
+          "description": "Worked developing ETL's with <strong>Scala</strong> and <strong>Apache Spark</strong>, using <strong>BDD</strong> for a system migration project. All sources and destinations were on <strong>Hadoop</strong> using mainly <strong>Hive</strong>.",
+          "tags": [
+            "Scala",
+            "Apache Spark",
+            "Hadoop",
+            "BDD"
+          ]
+        }
+      ]
+    }
+  ],
+  "additional": [
+    {
+      "title": "Freelancing",
+      "description": "In parallel to my career, I use to have side-projects whenever is possible, to keep fresh some knowledge or experiment with new technologies, mostly regarding web development, but also automation and file generation.",
+      "tags": [
+        "Django",
+        "Flask",
+        "Gatsby",
+        "Selenium"
+      ]
+    },
+    {
+      "title": "Mentoring",
+      "description": "I started to provide mentoring sessions regarding programming topics, mostly about Python, Scala and Apache Spark and some times also about cloud services mainly on <strong>AWS</strong>.",
+      "tags": [
+        "Scala",
+        "Python",
+        "Apache Spark",
+        "AWS",
+        "GCP"
+      ]
+    }
+  ]
+}

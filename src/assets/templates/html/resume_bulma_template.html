@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CM0 - Resume Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+<div class="columns is-mobile mt-4">
+    <div class="column is-4">
+        <div class="ml-4 has-line-height-1">
+            <aside class="menu">
+                <p class="menu-label">
+                    Contact
+                </p>
+                <ul class="menu-list">
+                    <li><a class="is-size-7">{{ contact.email }}</a></li>
+                    <li><a class="is-size-7">{{ contact.phone }}</a></li>
+                    <li><a class="is-size-7">{{ contact.linkedin }}</a></li>
+                    <li><a class="is-size-7">{{ contact.stackoverflow }}</a></li>
+                    <li><a class="is-size-7">{{ contact.github }}</a></li>
+                </ul>
+                <p class="menu-label">
+                    Main technologies
+                </p>
+                <ul class="menu-list">
+                    <li>
+                        <a class="is-size-7">Programming languages</a>
+                        <ul>
+                            {% for programming_language in main_technologies.programming_languages  %}
+                                <li><a class="is-size-7">{{ programming_language }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="is-size-7">Cloud providers experience</a>
+                        <ul>
+                            {% for cloud_provider in main_technologies.cloud_providers %}
+                                <li><a class="is-size-7">{{ cloud_provider }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% for extra in main_technologies.extras %}
+                        <li>
+                            <a class="is-size-7">{{ extra.title }}</a>
+                            <ul>
+                                {% for e in extra.elements %}
+                                    <li><a class="is-size-7">{{ e }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                    <li>
+                        <a class="is-size-7">Certifications</a>
+                        <ul>
+                            {% for certification in main_technologies.certifications %}
+                                <li><a class="is-size-7">{{ certification }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+                <p class="menu-label">
+                    Education
+                </p>
+                <ul class="menu-list">
+                    <li>
+                        <a class="is-size-7">{{ education.career }}</a>
+                        <ul>
+                            <li><a class="is-size-7">{{ education.school }}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    <div class="column is-7 mr-3">
+        <p class="title is-1 mb-2">{{ name }}</p>
+        <p class="subtitle is-3">{{ position }}</p>
+
+        <div class="notification is-info is-light has-text-justified is-size-7 mb-1">
+            <p class="subtitle is-5 m-0">Overview</p>
+            {{ overview }}
+        </div>
+
+        <span class="tag is-primary is-medium">Work experience</span>
+
+        {% for experience in work_experience %}
+            <div class="tags has-addons mt-5">
+                <span class="tag is-primary">{{ experience.company }}</span>
+                <span class="tag">{{ experience.time_period }}</span>
+            </div>
+            <div class="ml-5">
+            {% for project in experience.projects %}
+                <article class="message is-dark mt-3">
+                    <div class="message-body">
+                        <h1 class="title is-size-6">{{ project.title }}</h1>
+                        <h2 class="subtitle is-size-7">Role</h2>
+                        <p class="is-size-7">
+                            {{ project.description }}
+                        </p>
+                        <div class="tags mt-3">
+                            {% for project_tag in project.tags %}
+                                <span class="tag is-info is-light">{{ project_tag }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
+            </div>
+        {% endfor %}
+
+        {% if additional %}
+            <span class="tag is-primary is-medium my-4">Additional</span>
+            <div class="ml-5">
+            {% for item in additional %}
+                <article class="message is-dark">
+                    <div class="message-body">
+                        <h1 class="title is-size-6">{{ item.title }}</h1>
+                        <p class="is-size-7">
+                            {{ item.description }}
+                        </p>
+                        <div class="tags mt-3">
+                        {% for project_tag in item.tags %}
+                            <span class="tag is-info is-light">{{ project_tag }}</span>
+                        {% endfor %}
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="control mt-4">
+            <div class="tags has-addons">
+                <span class="tag is-dark">Resume generated by: </span>
+                <span class="tag is-info">https://github.com/cmosta0/ResumeGenerator</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
